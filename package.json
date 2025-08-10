@@ -1,0 +1,45 @@
+{
+  "name": "lemonade-toolkit",
+  "version": "2.0.0",
+  "main": "server-secure.js",
+  "scripts": {
+    "start": "node server-secure.js",
+    "start:legacy": "node server.js",
+    "dev": "nodemon server-secure.js",
+    "dev:legacy": "nodemon server.js",
+    "secure": "node server-secure.js",
+    "setup:security": "bash setup-security.sh",
+    "db:init": "node scripts/init-db.js",
+    "postinstall": "node scripts/init-db.js || true",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lemonade",
+    "saas",
+    "toolkit",
+    "business"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "Secure Lemonade Empire Toolkit SaaS",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.1",
+    "express-validator": "^7.2.1",
+    "helmet": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^7.0.5",
+    "pdfkit": "^0.17.1",
+    "pg": "^8.16.3",
+    "sqlite3": "^5.1.7",
+    "stripe": "^18.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
